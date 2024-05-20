@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order your computer</title>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+    <div class="app">
+        <h1>Order your components here</h1>
+
+        <button id="openModal">Customise the hardware</button>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form onsubmit="return false;">
+                    <label for="processor">Processor</label>
+                    <select id="processor" name="processor" required>
+                        
+                    </select>
+                    <label for="memory">RAM</label>
+                    <select id="memory" name="memory" required>
+                        
+                    </select>
+                    <label for="storage">Storage</label>
+                    <select id="storage" name="storage" required>
+                        
+                    </select>
+                    <label for="graphics">Graphics</label>
+                    <select id="graphics" name="graphics" required>
+                        
+                    </select> 
+                    <button class="submitBtn" type="submit" onclick="handleSubmit()">Submit</button>
+                </form>
+            </div>
+    </div>
+    <div id="orderSummary">
+        <h2>Order Summary</h2>
+        <p>Processor: <span id="processorSummary"></span></p>
+        <p>RAM: <span id="memorySummary"></span></p>
+        <p>Storage: <span id="storageSummary"></span></p>
+        <p>Graphics: <span id="graphicsSummary"></span></p>
+        <p>Price: <span id="priceSummary"></span> </p>
+    </div>
+
+    <div id="orderConfirmation">
+        <h2>Order Confirmation 🥳</h2>
+        <p>Thank you for your order. Your order number is #<span id="orderNumber"></span></p>
+        <img class="orderGif" src="https://cdn.dribbble.com/users/583807/screenshots/5310418/delivery_v2.gif" alt="delivery gif" width="200px">
+        <p>Your order will be shipped to <span id="shippingAddress"></span></p>
+    </div>
+
+    <button id="placeOrder" onclick="placeOrder()" disabled>Place Order</button>
+</div>
+
+    <script src="/main.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>
